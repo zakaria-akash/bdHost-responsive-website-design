@@ -28,12 +28,19 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.main-header_brand img {
+  height: 100%;
 }
 
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 95px);
+  width: calc(100% - 125px);
+  /* float: right; */
   vertical-align: middle;
 }
 
