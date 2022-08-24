@@ -1,16 +1,26 @@
 #product-overview {
   background-image: url("images/freedom.jpg");
   background-size: cover;
-  background-position: left 10% bottom 75%;
+  background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
-  background-clip:border-box;
+  background-clip: border-box;
   width: 100vw;
-  height: 40vh;
+  height: 33vh;
   padding: 0.8rem;
-  margin-top: 2.75rem;
+  /* margin-top: 3.50rem; */
   position: relative;
 }
+
+#product-overview h1 {
+  color: slategray;
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 60%;
+  font-size: 1.6rem;
+}
+
 .section-title {
   color: #2ddf5c;
   text-align: center;
@@ -29,36 +39,26 @@
   float: right;
 } */
 
-#product-overview h1 {
-  color: white;
-  font-family: "Anton", sans-serif;
-  position: absolute;
-  bottom: 5%;
-  left: 3%;
-}
-
-.plan_list {
-  width: 80%;
-  margin: auto;
+/* .plan_list {
+  width: 100%;
   text-align: center;
-}
+} */
 .plan {
   background: lightgreen;
   text-align: center;
+  margin: 0.5rem 0;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  width: 100%;
 }
 
 .plan-highlighted {
   background-color: darkgreen;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan_annotation {
+  margin: auto;
+  width: 50%;
   background-color: white;
   color: darkgreen;
   padding: 0.5rem;
@@ -93,10 +93,10 @@
 }
 
 #key-features {
-  background: 	#2F4F4F;
+  background: #2f4f4f;
   margin-top: 5rem;
   padding: 1rem;
-  
+
   /* added for later */
   /* width: 100vmax;
   height: auto;
@@ -115,15 +115,9 @@
   text-align: center;
 }
 
-.key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
-}
-
 .key-feature_image {
   background-color: #ffcede;
-  background-size:contain;
+  background-size: contain;
   width: 128px;
   height: 128px;
   border: 2px solid #424242;
@@ -193,4 +187,42 @@
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+/*adding CSS media queries for desktop or bigger screen*/
+@media (min-width: 53.5rem) {
+  #product-overview {
+    background-position: 50% 25%;
+    height: 40vh;
+  }
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+  .plan_list {
+    width: 80%;
+    margin: auto;
+  }
+  .plan {
+    display: inline-block;
+    width: 30%;
+    margin: 0.5rem;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+    height: 25rem;
+  }
+  .plan-highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  .plan_annotation {
+    width: auto;
+    margin: auto;
+  }
+
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
 }
