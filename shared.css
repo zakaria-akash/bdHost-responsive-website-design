@@ -218,6 +218,12 @@ main {
   margin-top: 2rem;
 }
 
+button:disabled {
+  cursor: not-allowed !important;
+  background-color: #ccc !important;
+  border-color: #ccc !important;
+  color: darkgray !important;
+}
 .open {
   display: block !important;
 }
@@ -227,12 +233,12 @@ main {
     display: none;
   }
   .mobile-nav {
-    width: 50%;
+    width: 60%;
   }
   .mobile-nav__item {
     margin: 3rem auto;
   }
   .mobile-nav__item a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
