@@ -25,44 +25,38 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+#plans {
+  margin-top: 5rem;
+}
 .section-title {
   color: #2ddf5c;
   text-align: center;
 }
-
-/* .icon {
-  height: 5%;
-  width: 5%;
-  position: relative;
+.plan_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.icon:first-of-type {
-  float: left;
-}
-
-.icon:nth-of-type(2) {
-  float: right;
-} */
-
-/* .plan_list {
-  width: 100%;
-  text-align: center;
-} */
 .plan {
   background: lightgreen;
   text-align: center;
-  margin: 0.5rem 0;
+  margin: 0;
   padding: 1rem;
   width: 100%;
+  height: 25rem;
+  vertical-align: middle;
 }
 
 .plan-highlighted {
   background-color: darkgreen;
   color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  z-index: 50;
 }
 
 .plan_annotation {
   margin: auto;
-  width: auto;
+  width: 50%;
   background-color: white;
   color: darkgreen;
   padding: 0.5rem;
@@ -96,15 +90,34 @@
   margin: 0.5rem 0;
 }
 
+.plan_button {
+  background-color: rgb(5, 175, 5);
+  color: whitesmoke;
+  font: inherit;
+  border: 2px solid rgb(5, 175, 5);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plan_button:hover,
+.plan_button:active {
+  background-color: whitesmoke;
+  color: rgb(5, 175, 5);
+}
+
+.plan_button:focus {
+  outline: none;
+}
+
+#key-features-section{
+  margin-top: 5rem;
+}
 #key-features {
   background: #2f4f4f;
-  margin-top: 5rem;
+  margin: 0 auto;
   padding: 1rem;
-
-  /* added for later */
-  /* width: 100vmax;
-  height: auto;
-  position: relative; */
 }
 
 #key-features .section-title {
@@ -116,9 +129,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+.key-feature {
+  vertical-align: middle;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .key-feature_image {
   background-color: #ffcede;
   background-size: contain;
@@ -126,7 +149,7 @@
   height: 128px;
   border: 2px solid #424242;
   border-radius: 50%;
-  margin: auto;
+  margin: 0;
 }
 #key-feature-1 {
   background-image: url("images/key-feature-1.png");
@@ -203,26 +226,20 @@
     font-size: 3rem;
   }
   .plan_list {
-    width: 80%;
-    margin: auto;
+    flex-direction: row;
+    justify-content: center;
   }
   .plan {
-    display: inline-block;
     width: 30%;
-    margin: 0.5rem;
-    vertical-align: middle;
     min-width: 13rem;
     max-width: 25rem;
-    height: 25rem;
   }
-  .plan-highlighted {
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  .plan_annotation{
+    width: 90%;
   }
-  .key-feature {
-    display: inline-block;
-    width: 30%;
-    max-width: 25rem;
-    vertical-align: top;
+  .key-feature_list{
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -232,7 +249,7 @@
       0 0 40px #ff8c00, 0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00;
   }
   to {
-    text-shadow: 0 0 20px #FFF0F5, 0 0 30px #FFF0F5, 0 0 40px #dfbd00,
+    text-shadow: 0 0 20px #fff0f5, 0 0 30px #fff0f5, 0 0 40px #dfbd00,
       0 0 50px #cd853f, 0 0 60px #cd853f, 0 0 70px #cd853f, 0 0 80px #cd853f;
   }
 }
