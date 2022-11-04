@@ -86,7 +86,7 @@ main {
 }
 
 .mobile-nav {
-  width: 50%;
+  width: 80%;
   display: none;
   position: fixed;
   z-index: 101;
@@ -137,7 +137,6 @@ main {
 .main-footer {
   background: black;
   padding: 2rem 0 0.5rem;
-  margin-top: 3rem;
 }
 .main-footer__links {
   list-style: none;
